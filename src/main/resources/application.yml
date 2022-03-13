@@ -1,0 +1,61 @@
+server:
+  port: 8080
+security:
+  firebase-props:
+    database-url: https://feature-flag-18c35.firebaseio.com
+    enable-strict-server-session: false
+    enable-check-session-revoked: false
+    enable-logout-everywhere: false
+    session-expiry-in-days: 5
+  cookie-props:
+    max-age-in-minutes: 7200
+    http-only: true
+    secure: true
+    domain: http://localhost:3000
+    path: /
+  allow-credentials: true
+  allowed-origins:
+    - http://localhost:3000
+  allowed-methods:
+    - GET
+    - POST
+    - PUT
+    - PATCH
+    - DELETE
+    - OPTIONS
+  allowed-headers:
+    - Authorization
+    - Origin
+    - Content-Type
+    - Accept
+    - Accept-Encoding
+    - Accept-Language
+    - Access-Control-Allow-Origin
+    - Access-Control-Allow-Headers
+    - Access-Control-Request-Method
+    - X-Requested-With
+    - X-Auth-Token
+    - X-Xsrf-Token
+    - Cache-Control
+    - Id-Token
+  allowed-public-apis:
+    - /favicon.ico
+    - /session/login
+    - /public/*
+    - /test/**
+  exposed-headers:
+    - X-Xsrf-Token
+  valid-application-roles:
+    - ROLE_SUPER
+    - ROLE_ADMIN
+    - ROLE_USER
+  super-admins:
+    - jnrfash@gmail.com
+  admins:
+    - oluwatomide.fasugba@infinityworks.com
+  users:
+    - tomidefash@gmail.com
+    - cleriocuzio15@yahoo.com
+  test:
+    login:
+      enabled: false
