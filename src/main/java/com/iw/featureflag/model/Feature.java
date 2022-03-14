@@ -15,6 +15,7 @@ import java.util.List;
 public class Feature {
     private String id;
     private String name;
+    @Builder.Default
     private boolean enabled = false;
 
     public static final List<Feature> GLOBAL_FEATURES = Collections.singletonList(

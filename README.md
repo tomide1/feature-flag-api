@@ -10,5 +10,5 @@
 - Substitute Auth Bearer token with token from step 1
 
 ## Technologies Used:
-Firebase - For authentication/Security
-Firestore - Database
+- Firebase - For authentication/Security
+- Firestore - Database
